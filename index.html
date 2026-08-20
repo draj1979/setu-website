@@ -103,6 +103,11 @@
   }
   .nav-cta:hover{ background: var(--amber-soft); transform: translateY(-1px); }
   @media (max-width: 760px){ .nav-links{ display:none; } }
+  @media (max-width: 480px){
+    .nav-mark{ font-size:1.1rem; gap:6px; }
+    .nav-logo{ width:26px; height:26px; }
+    .nav-cta{ font-size:0.78rem; padding:9px 14px; }
+  }
 
   /* ================= HERO ================= */
   .hero{
@@ -166,6 +171,7 @@
     padding: 14px;
     box-shadow: 0 40px 80px -30px rgba(0,0,0,0.6);
     max-width: 380px;
+    width:100%;
     margin-left:auto;
   }
   .phone-head{
@@ -277,9 +283,9 @@
     opacity:0; transition: opacity .5s ease;
   }
   .timeline.in-view .marker-label{ opacity:1; }
-  .marker-label.l1{ left:0%; text-align:left; transition-delay:.3s; }
+  .marker-label.l1{ left:0%; text-align:left; transform:none; transition-delay:.3s; }
   .marker-label.l2{ left:78%; text-align:center; transition-delay:1.3s; color: var(--gap-red); }
-  .marker-label.l3{ left:100%; text-align:right; transition-delay:1.7s; }
+  .marker-label.l3{ left:100%; text-align:right; transform:translateX(-100%); transition-delay:1.7s; }
   .marker-label b{ display:block; color: var(--ink-navy); font-family: var(--sans); font-size:0.92rem; margin-bottom:3px; }
   .marker-label.l2 b{ color: var(--gap-red); }
 
@@ -430,6 +436,63 @@
   @media (max-width: 560px){
     footer .wrap{ flex-direction:column; }
     .footer-right{ align-items:flex-start; }
+  }
+
+  /* ================= RESPONSIVE (tablet & mobile) ================= */
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns: 1fr; gap:48px; }
+    .phone{ max-width: 380px; margin: 0 auto; }
+  }
+
+  @media (max-width: 760px){
+    .wrap{ padding: 0 22px; }
+
+    .hero{ padding: 56px 0 64px; }
+    .hero h1{ margin: 14px 0 18px; }
+    .hero p.lede{ max-width: none; }
+    .cta-row{ gap:14px; }
+    .btn-primary, .btn-whatsapp{ padding:13px 20px; font-size:0.9rem; }
+
+    .gap-section{ padding: 72px 0 84px; }
+    .gap-head{ margin-bottom: 48px; }
+    .gap-callout{ margin-top: 76px; padding: 16px 20px; font-size:0.94rem; max-width:none; }
+
+    .how{ padding: 84px 0; }
+    .how-head{ margin-bottom: 44px; }
+
+    .features{ padding: 72px 0; }
+    .features-head{ margin-bottom: 36px; }
+    .feature-cell{ padding: 26px 22px; min-height:auto; }
+
+    .results{ padding: 72px 0; }
+    .compare-row .cell{ padding: 16px 16px; font-size:0.88rem; }
+    .compare-head-row .cell{ padding: 12px 16px; }
+
+    .cta{ padding: 84px 0; }
+
+    footer{ padding: 36px 0; }
+  }
+
+  /* Timeline: three absolute side-by-side labels don't fit a narrow track — stack them.
+     .timeline-track has a fixed 3px height, so labels stay absolutely positioned
+     (flow-based stacking would overflow the track without growing its box). */
+  @media (max-width: 640px){
+    .timeline{ padding: 16px 0 200px; }
+    .marker-label{
+      left:0 !important; right:0; width:100%; max-width:none;
+      text-align:left !important; transform:none !important;
+      font-size:0.78rem;
+    }
+    .marker-label b{ font-size:0.9rem; }
+    .marker-label.l1{ top:30px; }
+    .marker-label.l2{ top:82px; }
+    .marker-label.l3{ top:134px; }
+  }
+
+  @media (max-width: 420px){
+    .hero h1{ font-size: clamp(2.1rem, 9vw, 2.6rem); }
+    .cta-row{ flex-direction:column; align-items:stretch; }
+    .btn-primary, .btn-whatsapp, .btn-ghost{ text-align:center; justify-content:center; }
   }
 </style>
 </head>
