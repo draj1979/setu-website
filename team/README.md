@@ -1,13 +1,10 @@
 # Founder photos
 
-The About Us section (`#team` in [index.html](../index.html)) expects two files here:
+The About Us section (`#team` in [index.html](../index.html)) uses:
 
-- `dharam-tiwari.jpg` — Dharam Tiwari
-- `dharmendra-singh.jpg` — Dharmendra Singh
+- `dharam-tiwari.png` — Dharam Tiwari
+- `dharmendra-singh.jpeg` — Dharmendra Singh
 
-Drop the two headshots into this folder with those exact names and they'll render
-automatically — no other changes needed. Square-ish crops around 300×300px or larger
-work best; the CSS displays them as 84px circles (`object-fit: cover`, so any aspect
-ratio gets center-cropped to a circle).
-
-Delete this README once the real photos are in place.
+The CSS displays them as 84px circles (`object-fit: cover`, so any aspect ratio
+gets center-cropped). If you swap in a replacement photo, keep the same filename
+and extension, or update the `src` in index.html to match.
