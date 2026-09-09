@@ -375,6 +375,33 @@
   .compare-head-row .cell{ padding: 14px 22px; font-family: var(--mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--muted-graphite); }
   @media (max-width: 860px){ .results .wrap{ grid-template-columns:1fr; } }
 
+  /* ================= ABOUT / FOUNDERS ================= */
+  .team{ background: var(--blueprint); padding: 120px 0; }
+  .team-head{ max-width:600px; margin-bottom:56px; }
+  .team-head h2{ font-size: clamp(2rem, 3.4vw, 2.7rem); color: var(--ink-navy); margin:14px 0 0; }
+  .founder-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:28px; }
+  @media (max-width: 760px){ .founder-grid{ grid-template-columns: 1fr; } }
+  .founder-card{
+    background: var(--warm-white); border:1px solid var(--blueprint-line); border-radius:10px;
+    padding:36px 32px; display:flex; gap:22px; align-items:flex-start;
+  }
+  .founder-photo{
+    width:84px; height:84px; border-radius:50%; object-fit:cover; flex-shrink:0;
+    border:2px solid var(--amber); background: var(--blueprint-line);
+  }
+  .founder-name{ font-family: var(--serif); font-weight:600; font-size:1.15rem; color: var(--ink-navy); }
+  .founder-role{ font-family: var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:#9A7626; margin:5px 0 12px; }
+  .founder-bio{ font-size:0.92rem; color: var(--muted-graphite); line-height:1.55; }
+  .founder-link{
+    display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+    font-size:0.85rem; font-weight:600; color: var(--ink-navy);
+    border-bottom:1px solid var(--blueprint-line); padding-bottom:2px; transition: color .2s, border-color .2s;
+  }
+  .founder-link:hover{ color:#9A7626; border-color:#9A7626; }
+  @media (max-width: 480px){
+    .founder-card{ flex-direction:column; align-items:center; text-align:center; }
+  }
+
   /* ================= CTA ================= */
   .cta{
     background: var(--ink-navy); color: var(--warm-white);
@@ -473,6 +500,10 @@
     .compare-row .cell{ padding: 16px 16px; font-size:0.88rem; }
     .compare-head-row .cell{ padding: 12px 16px; }
 
+    .team{ padding: 72px 0; }
+    .team-head{ margin-bottom: 36px; }
+    .founder-card{ padding: 26px 22px; }
+
     .cta{ padding: 84px 0; }
 
     footer{ padding: 36px 0; }
@@ -510,6 +541,7 @@
       <a href="#how">How it works</a>
       <a href="#features">What it does</a>
       <a href="#results">Results</a>
+      <a href="#team">About us</a>
     </div>
     <a class="nav-cta" href="https://calendly.com/dharam-tiwari/30min" target="_blank" rel="noopener">Book a free demo</a>
   </div>
@@ -653,6 +685,38 @@
       <div class="compare-row"><div class="cell without">Cold leads quietly drop off</div><div class="cell with">Automatic follow-up keeps leads warm</div></div>
       <div class="compare-row"><div class="cell without">Sales team chases unqualified inquiries</div><div class="cell with">Sales team meets buyers ready to visit</div></div>
       <div class="compare-row"><div class="cell without">Unsold inventory sits for months</div><div class="cell with">More site visits move inventory faster</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / FOUNDERS -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="team-head">
+      <p class="eyebrow on-light">About us</p>
+      <h2>Built by people who've sold, shipped, and scaled.</h2>
+    </div>
+    <div class="founder-grid">
+      <div class="founder-card">
+        <img class="founder-photo" src="team/dharam-tiwari.jpg" alt="Dharam Tiwari, co-founder of Setu" width="84" height="84">
+        <div>
+          <div class="founder-name">Dharam Tiwari</div>
+          <div class="founder-role">Co-founder</div>
+          <p class="founder-bio">25 years in the IT industry — including Nokia, HP, Huawei and Adani — followed by 6 years building and scaling his own ventures.</p>
+          <a class="founder-link" href="https://www.linkedin.com/in/dharamtiwari/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="founder-card">
+        <img class="founder-photo" src="team/dharmendra-singh.jpg" alt="Dharmendra Singh, co-founder of Setu" width="84" height="84">
+        <div>
+          <div class="founder-name">Dharmendra Singh</div>
+          <div class="founder-role">Co-founder</div>
+          <p class="founder-bio">A social entrepreneur with deep experience in business development, partnerships, and market growth.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
